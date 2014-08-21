@@ -44,6 +44,7 @@ describe('ShortenController', function () {
     $httpBackend.expectPOST("/api/links").respond(201, '');
     $scope.addLink();
     $httpBackend.flush();
+    console.log($scope.loading);
     expect($scope.loading).to.be(false);
   });
 });
